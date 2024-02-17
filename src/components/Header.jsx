@@ -49,8 +49,8 @@ function Header({ trackingNumber, setTrackingNumber, onSearchSubmit }) {
           <img
             src={
               i18n.language === 'ar'
-                ? '/src/assets/logo-ar.svg'
-                : '/src/assets/logo-en.svg'
+                ? './src/assets/logo-ar.svg'
+                : './src/assets/logo-en.svg'
             }
             alt='logo'
             className='w-36'

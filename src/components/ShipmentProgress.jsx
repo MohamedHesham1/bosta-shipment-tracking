@@ -43,14 +43,14 @@ function ShipmentProgress({ transitEvents, colorClass }) {
           >
             {step.isLastStep ? (
               <img
-                src='/src/assets/bxs-truck.svg'
+                src='./src/assets/bxs-truck.svg'
                 className='z-10 absolute'
                 alt=''
               />
             ) : (
               step.isCompleted && (
                 <img
-                  src='/src/assets/bx-check.svg'
+                  src='./src/assets/bx-check.svg'
                   className='z-10 absolute'
                   alt=''
                 />
