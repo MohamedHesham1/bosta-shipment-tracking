@@ -15,7 +15,7 @@ function App() {
     try {
       const data = await fetchShipmentData(trackingNumber);
       setShipmentData(data);
-      console.log(shipmentData.TransitEvents);
+      console.log(shipmentData);
     } catch (error) {
       console.error('Error fetching shipment data:', error.message);
     }
@@ -28,7 +28,7 @@ function App() {
         setTrackingNumber={setTrackingNumber}
         onSearchSubmit={handleSearchSubmit}
       />
-      <main className='mt-10  max-w-[1200px] mx-auto'>
+      <main className='mt-10 max-w-[1200px] mx-auto'>
         {shipmentData ? (
           <ShipmentDetails shipmentData={shipmentData} />
         ) : (
