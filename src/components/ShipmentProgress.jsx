@@ -16,11 +16,16 @@ function ShipmentProgress({ transitEvents, colorClass }) {
     ];
 
     // Find the index of the step to stop based on the current state
-    const stopIndex =
+    let stopIndex =
       transitEvents.findIndex((event) => event.state === 'DELIVERED') + 1 ||
       transitEvents.findIndex((event) => event.state === 'OUT_FOR_DELIVERY') +
         1 ||
       3; // Default to 'outForDelivery' if neither 'DELIVERED' nor 'OUT_FOR_DELIVERY' is found
+
+    // Adjust stopIndex for 'DELIVERED_TO_SENDER' state
+    if (transitEvents.some((event) => event.state === 'DELIVERED_TO_SENDER')) {
+      stopIndex = 3; // Stop at the third step for 'DELIVERED_TO_SENDER'
+    }
 
     return steps?.map((step, index) => ({
       label: step.label,

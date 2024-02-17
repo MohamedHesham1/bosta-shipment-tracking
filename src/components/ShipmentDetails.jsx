@@ -88,7 +88,7 @@ function ShipmentDetails({ shipmentData }) {
         />
       </div>
 
-      <div className='flex flex-wrap lg:flex-nowrap gap-8 mt-10'>
+      <div className='flex flex-wrap lg:flex-nowrap gap-8 my-10 px-5'>
         <div>
           <h2 className='text-tertiary font-semibold'>
             {t('shipmentDetails')}
